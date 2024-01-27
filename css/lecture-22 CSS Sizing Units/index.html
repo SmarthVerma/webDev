@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css sizing units</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 13px;
+        }
+
+        .box1 {
+            font-size: 18px;
+            box-sizing: border-box;
+            background-color: slategrey;
+            border: 2px solid black;
+            /* width: 1920px; */
+            /* width: 100vw; */
+            width: 70vw;
+            margin: auto;
+        }
+
+        .container {
+    font-size: 18px;
+    box-sizing: border-box;
+    background-color: rgb(41, 131, 221);
+    border: 2px solid black;
+    width: 70vw;
+    min-height: 70vh;
+    margin: 44px auto;
+}
+
+.container .within {
+    box-sizing: border-box;
+    background-color: brown;
+    margin-top: 1%;
+    min-height: 10vh;
+    width: 50%;
+    border: 2px solid black;
+}
+
+
+
+        .para{
+            font-size: 33px;
+        }
+        .para > p{
+            font-size: 0.5em;
+            /* font-size: 0.5rem; */
+        }
+        h2{
+            font-size: 1em;
+        }
+        h1{
+            font-size: 1em;
+        }
+
+    </style>
+</head> 
+
+<body>
+    <div class="box1">
+        This is a div box
+    </div>
+
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sint, dignissimos omnis pariatur eum itaque,
+        explicabo, neque ipsa velit dolore qui doloremque quisquam magni officia doloribus architecto sapiente nostrum
+        est dolorum? Alias magni quaerat dolores ullam dolore sapiente ex minus corrupti, exercitationem beatae
+        inventore. Eaque fugiat sed cupiditate, sapiente ea assumenda nobis earum aliquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsam cumque harum, obcaecati mollitia ex? Natus totam eveniet maxime dignissimos nemo ipsam ullam quam, ad nobis minima voluptates, libero, aperiam incidunt laudantium ipsa reiciendis?
+        <div class="within">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, culpa dolore debitis temporibus voluptate sit quis quae veritatis iure tempora blanditiis, quo officia saepe similique maxime iste veniam dolorum ipsa voluptatibus minima, ratione impedit! Obcaecati, recusandae totam? Deserunt vero rerum recusandae iusto impedit autem!
+            smarth is best yayayayayay Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iste illum accusamus amet cupiditate quibusdam nisi facilis nihil dolorum necessitatibus eaque, in dolor!
+            <div class="within">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, culpa dolore debitis temporibus voluptate sit quis quae veritatis iure tempora blanditiis, quo officia saepe similique maxime iste veniam dolorum ipsa voluptatibus minima, ratione impedit! Obcaecati, recusandae totam? Deserunt vero rerum recusandae iusto impedit autem!
+                smarth is best yayayayayay Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iste illum accusamus amet cupiditate quibusdam nisi facilis nihil dolorum necessitatibus eaque, in dolor!
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="para">
+        Something is here!
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi voluptatibus ullam quo? Accusantium hic deserunt vitae laboriosam illum? Veritatis, asperiores nihil repellat placeat quia voluptatibus maxime ipsam incidunt, molestiae totam alias deleniti, libero sapiente repellendus commodi quam! Nisi excepturi, maxime delectus est sequi incidunt exercitationem commodi itaque cupiditate quisquam, velit facilis voluptas minima dolore unde dolorem, voluptatem molestias consectetur odio. Fugit non mollitia ad!</p>
+        <h2>I am learning a lot here</h2>   
+    </div>
+    
+    <h1>I am h1 tag</h1>
+    <h3>I am h3 tag</h3>
+    <h4>I am h4 tag</h4>
+</body>
+
+</html>

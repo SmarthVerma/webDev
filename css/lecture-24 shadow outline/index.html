@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and outline</title>
+    <style>
+        *{
+            margin: 9px;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            box-shadow: 7px 5px 20px 7px #e720ff85;
+            padding: 151px;
+            
+        }
+        .sometxt{
+            margin-top: 174px;
+            margin-left: 89px;
+            text-shadow: 4px 4px 6px grey;
+            outline: 2px solid black;
+            outline-offset: 6px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box that can contains text coming up from you
+    </div>
+    <div class="sometxt">
+        Hi here i have some text thru lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis beatae quam molestiae omnis rem?
+    </div>
+
+    <div class="diff">
+        <h1>Differences between Outlines and Borders:</h1>
+            <ol>
+                <li><strong>Position:</strong>Outlines don't take up space; they're drawn around the element, outside of any border.</li>
+                <li><strong>Offset:</strong>Using the outline-offset property, you can set the space between an outline and the edge or border of an element.</li>
+                <li><strong>Width:</strong>Borders can have varying widths on different sides, outlines have a uniform width.</li>
+                <li><strong>Rounded Corners:</strong>Borders can have rounded corners using border-radius, while outlines generally cannot.</li>
+            </ol>
+    </div>
+</html>

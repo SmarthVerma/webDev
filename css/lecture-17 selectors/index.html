@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selector</title>
+
+    <style>
+        /* element selector */
+        div{
+            background-color: antiquewhite;
+        }
+        /* class selector */
+        .classFirst{
+            background-color: black;
+            color: aliceblue;
+        }
+        /* id selector */
+        #classSecond{
+            background-color: blueviolet;
+            color: lightgray;
+        }
+        /* child selector */
+        div > p{
+            background-color: greenyellow;
+            color: black;
+        }
+        /* descendent selector */
+        article span{
+            background-color: rgb(255, 0, 221);
+            
+        }
+        /* Universal selector */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* pseudo selector */
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: rgb(0, 237, 0);
+        }
+        a:active{
+            background-color: brown;
+        }
+        a:hover{
+            background-color: coral;
+        }
+
+        div>p:first-child{
+            background-color: darkgreen;
+        }
+        div>p:nth-child(2){
+            background-color: orange;
+        }
+        div>p:nth-child(3){
+            background-color: skyblue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>learning about selectors!</h1>
+
+    <div>
+        
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quibusdam delectus natus. Asperiores distinctio nostrum debitis.
+        
+        </div>
+
+    <div>
+        <p>
+        I am first para to test element selector
+    </p>
+    <p>
+        I am second div to test element selector
+    </p>
+    <p>
+        I am third para div to test element selector
+    </p>
+    </div>
+
+    <div class="classFirst">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facilis consequuntur quaerat quidem. Ipsa eum similique laborum non ipsum id magnam facilis eveniet voluptatibus voluptatum fuga culpa perspiciatis facere sit, maxime, exercitationem fugit laudantium.
+    </div>
+
+    <div id="classSecond">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure laborum minima veritatis accusamus incidunt esse sapiente earum amet, velit vero iste repellat! Rem illo alias aliquam similique, ad ea voluptate cupiditate, nisi ex ipsam, eligendi sit voluptas esse fuga blanditiis.
+
+    </div>
+
+        <article>
+            <p>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, facilis.
+                </span>
+            </p>target="_blank"
+        <br>
+        <a href="https://www.google.com" target="_blank">Click me to go to google </a>
+        <br>
+        <a href="https://www.facebook.com" target="_blank">facebook me </a>
+        <br>
+        <a href="https://www.instagram.com" target="_blank"> instagram </a>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity & Cascade</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1{
+            color: green;
+        }
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* The specificity of this selector is 10  */
+        .first{
+            color: orange;
+        }
+        /* The specificity of this selector is 10  */
+        .third{
+            color: blue;
+        }
+        /* The specificity of this selector is 10  */
+        .second{
+            color: red;
+        }
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [something=abc]{
+            color: rgb(0, 200, 255);
+        }
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        /* psudeo also have 10 specificity */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+        <h1 class="first second third">This lecture we learning about css Specificity and cascade</h1>
+        <p>
+            <h2>Cascade algorithm</h2>
+            <ol>
+
+                <li something="abc">Position and order of appearance: the order in which your CSS rules appear</li>
+                <li>Specificity: an algorithm that determines which CSS selector has the strongest match</li>
+                <li>Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS</li>
+                <li>Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type</li>
+            </ol>
+        
+        Lets look into all these one by one</p>
+
+        <span style="border: 2px solid; font-weight: 900;">Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector</span>
+
+        <h2>Specificity calculations</h2>
+        <ul>
+            <li>Universal Selector: 0</li>
+            <li>Element selectors and pseudo-elements: 1</li>
+            <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+            <li>ID selectors: 100</li>
+            <li>Inline styles: 1000</li>
+            <li>!important attribute has 10,000</li>
+        </ul>
+</body>
+</html>

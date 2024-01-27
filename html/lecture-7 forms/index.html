@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forums-In html</title>
+  </head>
+  <body>
+    <h1>Welcome to Lorem.</h1>
+    <form action="post">
+      <div>
+        <label for="username">Enter your username: </label>
+        <input type="text" name="username" placeholder="Enter Username" autofocus/>
+      </div>
+
+      <div>
+        <label for="password">Enter your password: </label>
+        <input type="password" name="password" id="password" required/>
+      </div>
+      <div>
+        <!-- name same rakhne ne wo at a time ek hi select hoga -->
+
+        <label for="gender">Enter you gender: </label>
+        <br />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" />
+      </div>
+
+      <div>
+          <label for="news">You agree to subs to news</label>
+        <input type="checkbox" name="allTerms" id="news" />
+        <label for="emails">You agree to subs to mails</label>
+        <input type="checkbox" name="allTerms" id="emails" />
+        <label for="terms">You agree to subs to terms</label>
+        <input type="checkbox" name="allTerms" id="terms" />
+      </div>
+
+        <!-- text-area -->
+      <div>
+        <label for="comments">Enter comments</label>
+        <textarea name="comments" id="comments" placeholder="Enter your comments" cols="30" rows="10"></textarea>
+
+      </div>
+      <div>
+        <select name="phones" id="phones">
+            <option value="apple">apples</option>
+            <option value="oneplus">oneplus</option>
+            <option value="xaomi">xaomi</option>
+        </select>
+      </div>
+    </form>
+  </body>
+</html>

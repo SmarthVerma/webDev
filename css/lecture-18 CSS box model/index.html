@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS box model</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: bisque;
+        }
+
+        .box1 {
+            margin: 10px 500px -3px 480px;
+            padding: 0px 0px 0 14px;
+            box-sizing: border-box;
+            border: solid black;
+        }
+
+        .box2 {
+            width: 400px;
+            margin: 10px 0 11px 487px; 
+            padding: 0px 0px 0px -49px;
+            box-sizing: border-box;
+            border: solid black;
+
+        }
+
+        .parra {
+            margin: -9px 50px 110px 509px;
+            padding: 0px 30px 0px 31px;
+            box-sizing: content-box;
+            width: 300px;
+            background-color: coral;
+            border: solid green;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="box1 box">Hello everyone how are you doing i am box1</div>
+    <div class="box2 box">
+        Good moring everyone hope you doing fine, i am box2
+    </div>
+
+    <p class="parra">
+        Margin collpase: agar do margin of different element colide kr ri ha toh
+        only maximum waali margin hi used hogi baki sab collpase kr jaygi
+    </p>
+</body>
+
+</html>

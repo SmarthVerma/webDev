@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling lists in CSS</title>
+    <style>
+       
+        nav ul li{
+            margin: 15px;
+            padding: 16px;
+            background-color: aqua; 
+            border: 2px solid black;
+            list-style-type: lower-roman;
+            list-style-position: inside;
+            list-style-image: url(cat\ looking\ back.jpeg);
+            /* short code below*/
+            list-style: disc inside url(pups.jpeg);
+            /* bonus */
+            /* list-style-type: '😊';       */
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+    <ul>
+        <li>smarth</li>
+        <li>yam</li>
+        <li>dum</li>
+    </ul>
+</body>
+</html>
