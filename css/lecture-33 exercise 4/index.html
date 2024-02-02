@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiColor</title>
+    <style>
+        :root{
+            --prim-colour: rgb(89, 228, 182);
+            --sec-color: hsl(57, 75%, 78%);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            background-color: var(--sec-color);
+            min-height: 67px;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav ul li{         
+            margin-top: 9px;
+            margin-left: 15px;
+        }
+        nav ul li button:hover{         
+            margin-top: 5px;
+            margin-left: 15px;
+            padding: 14px;          
+        }
+        nav ul button{
+            
+            width: 100px;           
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: var(--prim-colour);
+            cursor: pointer;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><button>HOME</button></li>
+            <li><button>CONTACT</button></li>
+            <li><button>ABOUT US</button></li>
+        </ul>
+    </nav>
+</body>
+</html>
