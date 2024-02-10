@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selcetors more</title>
+    <style>
+        .content{
+            font-size: 26px;
+        }
+        .content p::first-line{
+            background-color: rgb(145, 179, 78);
+        }
+        .bigbox *{
+            font-size: 21px;
+            background-color: rgb(216, 169, 148); 
+            border: 1px solid black;
+        }
+        body:nth-child(odd){
+
+        }
+        body:last-child(2){
+            
+        }
+        
+        .bigbox::before{
+            content: "Bhai kala ka bhai ha";
+        }
+        .bigbox::after{
+            content: "after bhai ji content";
+            background-color: blueviolet;
+        }
+        ::selection{
+            background-color: black;
+            color: white;
+        }
+        .goody p::first-letter{
+            color: brown;
+            font-size: 41px;
+        }
+        ::placeholder{
+            color: aquamarine;
+            font-size: 37px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis necessitatibus eveniet a tempore vitae, animi nihil quisquam nisi vero hic cumque soluta. Maiores repudiandae odio voluptatibus, pariatur tempora eius iste quibusdam, dolorum similique assumenda quasi consequuntur ducimus sint commodi architecto iusto velit deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. At laudantium iste accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, laboriosam aperiam debitis veniam voluptatum, officiis necessitatibus nobis repellat tempore veritatis dignissimos nam fugiat dolores enim provident. Veritatis at aperiam quam autem consectetur.</p>
+    </div>
+    <div class="bigbox">
+        <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam ipsam consectetur, doloremque aliquid commodi animi iste quia quod quae fugit hic necessitatibus quam illo odit itaque, sunt alias possimus asperiores quas assumenda! Quaerat molestias molestiae quod incidunt dignissimos velit ducimus voluptates reiciendis.</div>
+        <div class="box2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, ea labore, cum a similique praesentium cupiditate eos adipisci totam nesciunt dolore nostrum qui amet exercitationem, quis maiores! Itaque, adipisci eos ab dolorem cumque quos pariatur quia dolor facere amet, unde voluptatum modi doloribus!</div>
+        <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, error delectus optio veniam ipsa deserunt voluptates laudantium quo, quas iusto distinctio assumenda minus?</div>
+    </div>
+    <div class="goody">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, tenetur! Dignissimos, aliquam vitae? Aliquid sequi, eius aliquam pariatur, repudiandae eligendi quae veniam quod dolor error ex exercitationem labore! Possimus officia architecto non vero enim.</p>
+    </div>
+
+    <input type="text" placeholder="Type me please">
+</body>
+</html>
