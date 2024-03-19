@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  background-image: url(assets/images/NetflixBackgroundImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: max(1300px, 100vw);
+  height: 90vh;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 50px 50px 50px 50px #00000099;
+}
+
+.main .box {
+  height: 90vh;
+  width: 100%;
+  opacity: 0.74;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+nav {
+  width: 82vw;
+  margin: auto;
+  height: 72px;
+  display: flex;
+  /* background-color: #c11212; */
+  justify-content: space-between;
+  z-index: 10;
+  align-items: center;
+}
+
+nav span {
+  margin-top: 26px;
+  z-index: 10;
+}
+
+nav .buttons {
+  margin-top: 11px;
+  z-index: 10;
+  display: flex;
+}
+
+nav .buttons button {
+  margin: 10px;
+  min-width: 83px;
+  height: 33px;
+  background-color: rgba(240, 248, 255, 0);
+  color: white;
+  font-size: 15px;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .buttons button:first-child {
+  display: flex;
+  gap: 7px;
+  font-weight: 550;
+  background-color: #16121274;
+  border: 1px solid rgb(127, 121, 121);
+}
+
+.red_button,
+nav .buttons .red_button {
+  font-weight: 600;
+  padding: 7px;
+  background-color: rgb(205, 5, 5);
+  border: 0px solid transparent;
+}
+
+.bigText {
+  width: 82vw;
+  margin: auto;
+  /* background-color: green; */
+  height: 76vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.textBox {
+  font-family: "Noto Sans", sans-serif;
+  position: relative;
+  color: white;
+  width: 830px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  line-height: 70px;
+}
+
+.textBox span:first-child {
+  font-weight: 900;
+  font-size: 61px;
+}
+
+.textBox span:nth-child(2) {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.textBox span:nth-child(3) {
+  font-size: 18px;
+  font-weight: 530;
+}
+
+.enterEmail {
+  display: flex;
+  gap: 16px;
+}
+@media only screen and (max-width: 960px) {
+  .main .logo {
+    width: 115px;
+  }
+  .main nav {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main .enterEmail {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .textBox {
+    line-height: 60px;
+  }
+
+  .textBox span:first-child {
+    font-weight: 700;
+    font-size: 45px;
+  }
+
+  .textBox span:nth-child(2) {
+    font-size: 20px;
+    font-weight: 560;
+  }
+
+  .textBox span:nth-child(3) {
+    font-size: 17px;
+    font-weight: 460;
+    line-height: 31px;
+    margin-bottom: 21px;
+  }
+}
+
+.enterEmail button {
+  color: white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 50px;
+  width: 230px;
+  font-size: 18px;
+  font-weight: 675;
+  padding: 14px 8px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  gap: 0px;
+}
+
+.enterEmail button:hover {
+  background-color: rgb(186, 0, 0);
+}
+
+.meraMail {
+  background-color: rgba(30, 33, 45, 0.53);
+  border: 1px solid rgb(99, 99, 109);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(99, 99, 109);
+  box-sizing: border-box;
+  padding: 15px;
+
+  height: 54px;
+  width: 344px;
+}
+
+.arc {
+  position: absolute;
+  height: 10px;
+  width: 100vw;
+  bottom: 0;
+  background-color: red;
+  z-index: 20;
+  margin-top: -0.25rem;
+  border-radius: 1000px;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+  );
+  color: white;
+}
+
+.bigreasons {
+  width: 82vw;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 16px;
+}
+@media only screen and (max-width: 700px) {
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 612);
+    grid-template-rows: repeat(4, 306);
+  }
+}
+.cards {
+  width: 306px;
+  height: 277px;
+  border-radius: 15px;
+  padding: 14px;
+  background: rgb(26, 45, 84);
+  background: rgb(78, 96, 134);
+  background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
+  display: grid;
+}
+
+.cards h3 {
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 25px;
+}
+.cards p {
+  box-sizing: border-box;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgba(171, 162, 162, 0.84);
+  font-size: 1.024rem;
+}
+.cards > span {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.faq {
+  padding: 34px;
+  width: 82vw;
+  margin: auto;
+  color: white;
+}
+
+.faqBoxContainer {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 390;
+}
+.faqBox {
+  display: flex;
+  cursor: pointer;
+  border-radius: 3px;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  padding: 28px;
+  width: 67%;
+  transition: background-color 0.6s ease-in-out;
+}
+.faqBox:hover {
+  background-color: rgb(66, 66, 66);
+}
+
+.ending {
+  padding: 34px;
+  width: 82vw;
+  margin: auto;
+  box-sizing: border-box;
+  color: white;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.secondMail {
+  width: 57%;
+}
+
+.enterEmail .getstarted2 {
+  width: 190px;
+  padding: 0;
+}
+.ques {
+  color: rgb(173, 164, 164);
+}
+.ques .num {
+  text-decoration: underline;
+}
+.linkContainer {
+  color: rgb(173, 164, 164);
+  text-decoration: underline;
+  min-height: 100px;
+  margin-top: 3%;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 12px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .linkContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 400px) {
+  .linkContainer {
+    width: 100vw;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ending {
+    width: 100vw;
+  }
+  .faq {
+    width: 100vw;
+  }
+}
+
+.linkContainer span {
+  cursor: pointer;
+}
+
+.endContainer {
+  margin-left: 30px;
+}
+
+.lastButton button {
+  margin: 10px;
+  min-width: 83px;
+  height: 33px;
+  background-color: rgba(240, 248, 255, 0);
+  color: white;
+  font-size: 15px;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: 30px;
+}
+
+.lastButton p {
+  margin-top: 34px;
+  margin-left: 30px;
+  color: rgb(173, 164, 164);
+}

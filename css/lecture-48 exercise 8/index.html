@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing ball</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;  
+            border: 2px solid black; 
+        }
+        
+        .background{
+            
+            height: 70vh;
+            width:100vw;
+            background-color: blue;
+            display: flex;
+            align-items: flex-end;
+            
+        }
+        .ball{
+            height: 115px;
+            background-color: red;
+            width: 115px;
+            border-radius: 77px;
+            border: 1px solid black;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+           /* animation: name duration timing-function delay iteration-count direction fill-mode;; */
+            
+
+            animation: ballIn_y_direction 4s cubic-bezier(0.12, 0.39, 1, 0.65) 1s 1 normal forwards,
+                       ballIn_x_direction 4s linear 1s 1 normal forwards;
+            
+
+        }
+
+    
+        @keyframes ballIn_x_direction{
+            from{
+                background-color: red;
+                /* transform: translateY(0); */
+                
+            }
+            to{
+                background-color: green;
+                transform: translateX(500px);
+            }
+      
+            
+        }
+
+        @keyframes ballIn_y_direction{
+            
+            25%{
+                transform: translateY(-700px);
+            }
+            75% {
+                
+                transform: translateY(-500px);
+            }
+
+           
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div class="ball">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -10,6 +10,8 @@
             border: 3px solid black;
             display: grid;
             grid-template-columns: 130px   120px  120px;
+            /* grid-template-columns: repeat(4, 3fr); */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
             grid-template-rows: [firsty]100px [secondy] 100px [thirdy] 100px;
 
             gap: 14px;
@@ -19,12 +21,15 @@
             /* syntax repeat */
                 grid-template-columns: repeat(4, minmax(100px, 3fr));
 
-            /* Yeh bhi ha kuch */
+            /* Yeh bhi ha    kuch */
 
             /* align-content: ; */
             /* justify-content: ; */
                 /* dono ka mixture */
             /* place-content: center; */
+
+            /* justify-content and align-content:     jab container bada ho aur usme grid ko align krna hio */
+            /* justify-items and align-items:   grid box ke andar kaam krygi */
 
         }
         .items{

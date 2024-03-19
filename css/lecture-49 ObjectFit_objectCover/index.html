@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object properties and Background properties</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            margin: 60px;
+            height: 60vh;
+            width: 80vw;
+            border: 1px solid black;
+            
+        }
+        .container>img{
+            height: 60vh;
+            width: 80vw;
+                        /* Image cut hogi */
+            object-fit: cover;
+                    /* Space create hogi for image  */
+            /* object-fit: contain; */
+                    /* Default */
+            /* object-fit: fill; */
+            /* object-fit: scale-down; */
+
+            object-position: 56% 81%;
+
+
+        }
+
+        .container2{
+            height: 60vh;
+            width: 80vw;
+            border: 1px solid black;
+            margin: 60px;
+            background-image: url("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg");
+            background-repeat: no-repeat;
+            /* background-position: 0% 0%; */
+            background-position: center bottom;
+            /* background-clip: border-box;  ha kuch yeh bhi*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg" alt="img">
+    </div>
+    <div class="container2">
+        
+    </div>
+</body>
+</html>
