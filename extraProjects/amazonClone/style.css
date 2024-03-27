@@ -1,0 +1,420 @@
+@font-face {
+  font-family: amazon-ember;
+  src: url(assets/fonts/amazon-ember-cufonfonts/Amazon\ Ember.ttf);
+}
+@font-face {
+  font-family: amazon-ember-bold;
+  src: url(assets/fonts/amazon-ember-cufonfonts/Amazon\ Ember\ Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: amazon-ember;
+  /* overflow-x: hidden; */
+}
+
+html{
+  width: 100vw;
+}
+
+body {
+  background-color: rgb(227, 230, 230);
+  width: 100vw;
+  height: 100vh;
+  
+}
+nav {
+  background-color: #131921;
+  padding: 32px 0px 33px 0px;
+  box-sizing: border-box;
+  height: 2vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+html{
+  width: 100vw;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+.amazonlogo {
+  height: 30px;
+}
+
+.amazonlogo:hover {
+  outline: 1px solid white;
+  outline-offset: 14px;
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  width: 190px;
+}
+.location p {
+  margin-left: 19px;
+  font-size: 11px;
+  color: #cdcece;
+  line-height: 10px;
+}
+
+.location .update {
+  font-family: amazon-ember-bold;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  display: flex;
+}
+.location div img {
+  width: 20px;
+  align-self: flex-end;
+}
+.location span {
+  align-self: flex-end;
+}
+
+.location:hover {
+  outline: 1px solid white;
+  outline-offset: 16px;
+  cursor: pointer;
+}
+
+.BigSearchBox {
+  max-width: auto;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 0.4fr 12fr 1fr;
+  grid-template-rows: 40px;
+  gap: 0px;
+  /* border: 1px solid rgb(255, 255, 255); Border should be separate from border-radius */
+  border-radius: 1px; /* Moved border-radius to a separate line */
+}
+
+@media (min-width: 1000px) {
+  .BigSearchBox {
+    max-width: auto; /* Change max-width to a percentage of viewport width */
+  }
+}
+.allButton select {
+  width: 48px;
+  /* border-radius: 4px; */
+  box-sizing: border-box;
+  background-color: rgb(227, 230, 230);
+  border: 0px solid black;
+  /* width: 100%; */
+  height: 100%;
+  border-radius: 5px 0px 0px 5px;
+}
+.allButton select:hover{
+  cursor: pointer;
+}
+
+.searchBox input {
+  /* border-radius: 4px; */
+  box-sizing: border-box;
+  padding: 20px;
+
+  width: 100%;
+  max-width: auto;
+  min-width: auto;
+  /* Set maximum width to 400px or adjust as needed */
+  height: 100%;
+  margin-bottom: 1px;
+  border: 0px solid black;
+  justify-self: auto;
+}
+.searchIcon {
+  background-color: rgb(254, 189, 105);
+  justify-self: center;
+  align-self: center;
+  width: 78px;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  border-radius: 0px 7px 7px 0px;
+}
+
+.searchIcon:hover{
+  background-color: rgba(254, 189, 105, 0.658);
+  cursor: pointer;
+}
+
+.lang {
+  display: flex;
+}
+
+.lang:hover {
+  outline: 1px solid white;
+  outline-offset: 18px;
+  cursor: pointer;
+}
+
+.lang img {
+  width: 25px;
+}
+
+.lang select {
+  background-color: #131921;
+  color: white;
+  font-weight: 700;
+  border: 0;
+}
+
+.signin {
+  width: 130px;
+  background-color: #131921;
+}
+.signin p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.signin span {
+  font-family: amazon-ember-bold;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.signin:hover {
+  outline: 1px solid white;
+  outline-offset: 10px;
+  cursor: pointer;
+}
+
+.returns {
+  width: 90px;
+}
+.returns p {
+  font-size: 13px;
+  font-weight: 400;
+}
+.returns span {
+  font-family: amazon-ember-bold;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.returns:hover {
+  outline: 1px solid white;
+  outline-offset: 10px;
+  cursor: pointer;
+}
+
+.cart {
+  font-family: amazon-ember-bold;
+  font-size: 15px;
+  font-weight: 600;
+  width: 70px;
+}
+
+.cart:hover {
+  outline: 1px solid white;
+  outline-offset: 7px;
+  cursor: pointer;
+}
+
+
+.blank{
+  height: 7vh;
+  box-sizing: border-box;
+  padding: 32px 0px 33px 0px;
+  background-color: rgb(4, 49, 49);
+}
+
+main{
+  width: 100vw;
+  height: 16vh;
+  position: static;
+  z-index: 45;
+}
+
+.smallnav ul{
+ display: flex;
+  /* grid-template-rows: 75px; */
+  gap: 18px;
+  justify-content: left;
+  align-items: center;
+}
+
+.smallnav ul li{
+  list-style-type: none;
+}
+
+.smallnav{
+  padding: 5px 55px 5px 55px;
+  background-color: rgb(35,47,62);
+  min-height: 28px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  width: max(100vw,1920px);
+  position: static;
+}
+
+
+.smallnav li:hover{
+  outline: 1px solid white;
+  outline-offset: 7px;
+  cursor: pointer;
+}
+
+.smallnav .all{
+  align-self: center;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-right: 7px;
+}
+
+.smallnav .all:hover{
+ outline: 1px solid white;
+  outline-offset: 1px;
+  cursor: pointer;
+}
+
+
+.topbox-Bg{
+  padding: 0;
+  /* margin-inline: auto; */
+  /* margin-left: 80px; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+
+.topbox-Bg img{
+  width: max(85vw,900px);
+  margin: auto;
+
+}
+
+.firstContainer{
+  /* margin: auto; */
+  /* background-color: rgba(93, 46, 138, 0.24); */
+  width: max(75vw,800px);
+  position: absolute;
+  top: 35vh;
+  height: 45rem;
+  display: grid;
+  grid-template-columns: repeat(4,1.2fr);
+  grid-template-rows: 350px;
+  padding: 13px;
+  gap: 16px;
+  row-gap: 12px;
+  z-index: 1000;
+}
+
+.firstContainer img:hover, .discrip:hover{
+  cursor: pointer;
+}
+
+
+.cards{
+height: 317px;
+width: auto;
+background-color: rgb(255, 255, 255);
+padding: 11px;
+padding-top: 15px;
+border-radius: 5px;
+color: rgb(44, 43, 43);
+}
+
+.cards p{
+  font-family:  amazon-ember-bold;
+  font-size: 19px;
+}
+
+.gallery{
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 75px 35px 75px 35px 40px;
+  gap: 6px;
+}
+
+.gallery a{
+  text-decoration: none;
+  color: rgb(5, 110, 248);
+  font-size: 11px;
+}
+
+.gallery img{
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+}
+
+.gallery .discrip{
+  font-family: amazon-ember;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+.see-more{
+  align-self: flex-end;
+}
+
+.BigerCard{
+  display:  grid;
+  grid-template-rows: 137px   ;
+  gap: 5px;
+}
+
+.BigerCard img{
+  padding: 0;
+  width: 280px;
+  height: 185px;
+  border-radius: 6px;
+}
+.smallCard{
+height: 110px;
+width: auto;
+background-color: rgb(255, 255, 255);
+padding: 11px;
+padding-top: 15px;
+border-radius: 5px;
+color: rgb(44, 43, 43);
+display: grid;  
+gap: 16px;
+}
+
+.smallCard h2{
+  width: 80%;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.yellow-btn{
+  justify-self: center;
+  align-items: center;
+  width: 260px;
+  border: 0px;
+  height: 2rem;
+  border-radius: 6px;
+  background-color: #FFD814;
+  
+}
+.yellow-btn:hover{
+  cursor: pointer;
+}
+

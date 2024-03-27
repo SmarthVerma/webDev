@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 1000px; /* Just for demonstration, adjust height as needed */
+  }
+  
+  .block {
+    position: fixed;
+    top: 0; /* Fixed to the top of the viewport */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #faf9f9;
+    padding: 20px;
+    transition: transform 0.3s ease-out;
+    transform: translateY(-100%); /* Initially hide the block above the viewport */
+  }
