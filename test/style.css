@@ -1,17 +1,27 @@
-.container {
-    position: relative;
-    width: 100%;
-    height: 1000px; /* Just for demonstration, adjust height as needed */
-  }
-  
-  .block {
-    position: fixed;
-    top: 0; /* Fixed to the top of the viewport */
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #faf9f9;
-    padding: 20px;
-    transition: transform 0.3s ease-out;
-    transform: translateY(-100%); /* Initially hide the block above the viewport */
-  }
+body{
+    background-color: #E0E0E2;
+}
+h1{
+    color: #721817;
+}
+h2{
+    color: #721817;
+}
+.center-text{
+    text-align: center;
+}
+
+#logo{
+    display: block;
+    margin: auto;
+}
+
+h2 span{
+    color: #FA9F42;
+    font-size: 0.75rem;
+}
+
+#copyright{
+    padding: 12px;
+    font-size: 0.75em;
+}
