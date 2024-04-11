@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(216,216,216);
+    font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Ubuntu, Cantarell, "Fira Sans", sans-serif;
+}
+
+body{
+    background-color: #1F1F1F;
+}
+.nav{
+    list-style-type: none;
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav img{
+    width: 35px;
+}
+
+.nav ol{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navEnd{
+    display: flex;
+    column-gap: 40px;
+}
+
+.navimg1{
+    width: 16px;
+}
+.navimg2, .navimg3{
+    width: 21px;
+}
+
+
+.circle{
+    height: 1   0vh;
+    width: 100vw;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.circle>img{
+    width: 70px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    
+}
+
+.userDetails{
+    text-align: center;
+    margin: 1.2rem;
+}
+
+.name h4{
+    font-size: 19px;
+    font-weight: 400;
+}

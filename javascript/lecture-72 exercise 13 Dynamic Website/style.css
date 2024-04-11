@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(203, 209, 209);
+}
+
+body {
+  background-color: rgb(15, 15, 15);
+}
+.cover {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 60vh;
+  width: 80vw;
+  border: 2px solid white;
+  padding: 40px;
+}
+
+.box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 10px;
+  min-height: 68px;
+  width: 100%;
+  border-radius: 0.6em;
+  background-color: rgb(16,15,16);
+}
+.thumb {
+  width: 168px;
+  height: 94px;
+}
+.duration {
+  /* box-sizing: content-box; */
+  display: inline-block;
+  background-color: rgb(49,48,46);
+  color: rgb(228, 241, 241);
+  height: 10px;
+  width: 29px;
+  text-align: center;
+  position: relative;
+  top: -26px;
+  left: 129px;
+  border-radius: 3px;
+
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px;
+  padding-bottom: 4px;
+}
+
+.discript{
+    height: 94px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin-left: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    font-weight: 300;
+}
+
+.details{
+    display: flex;
+    position: relative;
+    top: 3vw;
+    font-size: 12px;
+    margin-left: 4px;
+
+}
+
+.details .name, .views, .uploaded{
+        color: rgb(169,169,169) ;
+}

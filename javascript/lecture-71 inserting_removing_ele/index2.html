@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning insertion</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hi my name is smarth</div>
+        <div class="box">hi i am just a boxxy, boxxy of daer</div>
+        <div class="box">Lorem, ipsum dolor.</div>
+        <div class="box">kadhun ad qe acjde</div>
+        <div class="box">jaccob doocub khelob</div>
+    </div>
+
+    <script>
+        // appened
+        let cont = document.querySelector(".container");
+        let cube = document.createElement("div");
+        cube.setAttribute("class", "cube");
+        cube.setAttribute("style", "background-color: rgb(124, 57, 186);");
+        cube.innerHTML="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam saepe et porro facere autem debitis maxime expedita libero obcaecati distinctio odio, quam nisi cumque, dignissimos perspiciatis ullam culpa, dolor cupiditate minus ad!";
+        cont.append(cube);
+        //prepend
+        let cube2 = document.createElement("div");
+        cube2.setAttribute("class", "cube2");
+        cube2.setAttribute("style", "background-color: rgb(29, 124, 43);");
+        cube2.innerHTML="just some text i am writing i dont why, i cant seem to find words for this textElement, but atleast i tried";
+        cont.prepend(cube2);
+        //before
+        let cube3 = document.createElement("div");
+        cube3.setAttribute("class", "cube3");
+        cube3.setAttribute("style", "background-color: rgb(43, 93, 174);");
+        cube3.innerHTML="jdah ah jak maksad nahi bhulna!";
+        cont.before(cube3);
+        
+        //after
+        let cube4 = document.createElement("div");
+        cube4.setAttribute("class", "cube4");
+        cube4.setAttribute("style", "background-color: rgb(43, 93, 174);");
+        cube4.innerHTML="jdah ah jak maksad nahi bhulna!";
+        cont.after(cube4);
+
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting and removing</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" data-CreatedBYme0="Smarth">Hey i am boxyyy, i love boxing!</div>
+        <div class="box">Hey i am boxyyy, i love boxing!</div>
+    </div>
+
+    <script>
+        let createDiv=document.createElement("div");
+        createDiv.innerHTML="I am being inserted, i like peneteration";
+        createDiv.setAttribute("class","box2");
+        document.querySelector(".container").append(createDiv);
+    </script>
+</body>
+</html>
