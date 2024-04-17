@@ -28,18 +28,63 @@
       </ol>
     </div>
 
-    <main>
+    <main class="main">
       <div class="circle">
         <img
           src="image/402442986_1095734484852112_5970716186785327733_n.jpg"
           alt=""
         />
-      </div>
-      <div class="userDetails">
         <span class="name">
           <h4>Paying Shivansh Mahajan</h4>
         </span>
+        <div class="banking">
+          <span>
+
+            <img width="15" src="image/shield.png" alt="">
+          </span>
+          Banking name: SHIVANSH MAHAJAN</div>
+        <span class="phoneNumber"> +91 7018836872 </span>
+
+        <div class="input">
+          <span id="rupa" style="display: inline-block"><h2>₹</h2></span>
+
+          <input id="myInput" type="number" placeholder="0" />
+        </div>
       </div>
     </main>
+    <!-- <script src="script.js"></script> -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let heep = document.getElementById("myInput");
+      let myHeight = window.getComputedStyle(heep).getPropertyValue("height");
+      document.getElementById("rupa").style.height = myHeight;
+
+      let inpu = document.querySelector("#myInput");
+
+      // Function to adjust input width
+      function adjustInputWidth() {
+        const newWidth = inpu.scrollWidth;
+        inpu.style.width = newWidth + 'px';
+      }
+
+      // Adjust width on input event
+      inpu.addEventListener('input', () => {
+        adjustInputWidth();
+        
+        // Check if the input element is focused
+        if (inpu === document.activeElement) {
+          document.querySelector(".circle").style.marginBottom = "36vh";
+        }
+      });
+
+      // Reset width if input value is empty
+      inpu.addEventListener('input', () => {
+        if (inpu.value === '') {
+          inpu.style.width = 'auto';
+        }
+      });
+    });
+  </script>
+
   </body>
 </html>

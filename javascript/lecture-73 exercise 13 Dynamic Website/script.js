@@ -62,4 +62,4 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail) {
 }
 
 // Example usage:
-x
+23

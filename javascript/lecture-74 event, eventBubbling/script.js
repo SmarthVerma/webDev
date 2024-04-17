@@ -10,5 +10,5 @@ document.addEventListener("contextmenu", ()=>{
 let textarea=document.querySelector("#textarea");
 
 textarea.addEventListener("keydown", (e)=>{
-    console.log("Keys Pressed: ",e);
+    console.log(e, "Keys Pressed: ",e.key,"keycode: ", e.keycode);
 })

@@ -1,13 +1,32 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 *{
     margin: 0;
     padding: 0;
-    color: rgb(216,216,216);
+    color: #d8d8d8;
     font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Ubuntu, Cantarell, "Fira Sans", sans-serif;
 }
 
 body{
     background-color: #1F1F1F;
 }
+
+main{
+    height: 60vh;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav{
     list-style-type: none;
     padding: 24px;
@@ -15,9 +34,7 @@ body{
     box-sizing: border-box;
 }
 
-.nav img{
-    width: 35px;
-}
+
 
 .nav ol{
     display: flex;
@@ -30,19 +47,25 @@ body{
 }
 
 .navimg1{
-    width: 16px;
+    width: 12px;
 }
 .navimg2, .navimg3{
-    width: 21px;
+    width: 15px;
 }
 
 
 .circle{
-    height: 1   0vh;
+    height: 10vh;
     width: 100vw;
     border-radius: 50%;
     margin: auto;
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 36vh;
+
 }
 
 .circle>img{
@@ -60,5 +83,55 @@ body{
 
 .name h4{
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 600;
 }
+
+.banking{
+    font-weight:500 ;
+    display: flex;
+    gap: 7px;
+}
+
+.phoneNumber{
+    margin-top: 15px;
+}
+
+.input h2{
+    display: inline;
+}
+
+
+.input input{
+    max-width: 140px;
+    width: 29px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 20px;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+}
+
+.input h2{
+    color: rgb(158, 153, 153);
+}
+
+#myInput{
+    font-size: 44px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+#rupa{
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+
+   
