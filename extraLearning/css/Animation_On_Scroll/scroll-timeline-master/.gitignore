@@ -1,0 +1,33 @@
+### Node template
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+node_modules
+
+# Output of 'npm pack'
+*.tgz
+
+# VSCode, webstorm or intellij configs
+.idea
+.vscode
+
+# demos deployment directory
+build
+dist
+
+# jest coverage folder
+coverage
+
+test/wpt
+test/report
+
+.DS_Store
+
+.env

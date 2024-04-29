@@ -1,0 +1,129 @@
+.flex{
+    display: flex;
+}
+
+.flexColumn{
+    flex-direction: column;
+}
+
+
+.alignCenter{
+    align-items: center;
+}
+.justifyCenter{
+    justify-content: center;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.brdr{
+    border: 2px dotted rgb(255, 255, 255);
+}
+.brdr-red{
+    border: 2px dotted rgb(241, 0, 0);
+}
+.brdr-yellow{
+    border: 2px dotted rgb(250, 233, 0);
+}
+.brdr-lime{
+    border: 2px dotted lime;
+}
+
+
+.invert{
+    filter: invert();
+}
+
+.greyColor{
+    color: #B3B3B3;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.p-1{
+    padding: 18px;
+}
+.p-l1{
+    padding-left: 1rem;
+}
+.p-r1{
+    padding-right: .41rem;
+}
+.p-lr1{
+    padding: 0 1rem 0 1rem;
+}
+.p-lr2{
+    padding: 0 1.5rem 0 1.5rem;
+}
+.p-top1{
+    padding-top: 0.4rem;
+}
+.m-1{
+    margin: 1rem;
+}
+.mTop-1{
+    margin-top: 36px;
+}
+.mBot-1{
+    margin-bottom: 19px;
+}
+
+
+.gap-0{
+    gap: 8px;
+}
+.gap-1{
+    gap: 13px;
+}
+.gap-2{
+    gap: 17px;
+}
+
+.bold{
+    font-weight: 700;
+}
+.bold-1{
+    font-weight: 600;
+}
+.fsize-1{
+    font-size: 1rem;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+
+.center{
+    place-content: center;
+    align-items: center;
+}
+
+.space-between{
+
+    justify-content: space-between;
+}
+
+.brdr-rad1{
+    border-radius: 0.7rem;
+}
+.brdr-rad2{
+    border-radius: 1rem;
+}
+.brdr-rad3{
+    border-radius: 1.3rem;
+}
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+
+

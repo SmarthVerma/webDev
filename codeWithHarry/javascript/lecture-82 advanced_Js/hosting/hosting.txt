@@ -1,0 +1,28 @@
+hosting ek process ha jisme,
+interpreter appears to move the declaration to the top of the code befor excution
+
+for example=> function
+                check image1
+
+
+
+NOTE: ONLY DECLATION JAATI HA, USKI VALUE NI 
+        for example-> image2
+
+
+NOTE: hosting let const me NAHI HOTI
+        reference image2
+
+
+
+So therefore agar hum aisa kre
+
+let a=()=>{         // isme hostingg nahi hogi
+    console.log("hello sakxy);
+
+}
+
+const a=()=>{         // isme hostingg nahi hogi
+    console.log("hello sakxy);
+
+}

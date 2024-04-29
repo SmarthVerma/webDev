@@ -1,0 +1,44 @@
+
+.article-title{
+    /* background-color: palegreen; */
+    position: relative;
+    /* top: 100px; */
+}
+
+
+/* postion aboslute */
+
+    .article-container{
+        position: relative;
+        /* background-color: aqua; */
+    }
+    .container{
+        /* position: relative; */
+        background-color: rgb(77, 77, 173);
+    }
+    
+    .test{
+        position: absolute;
+        /* viewport ek acoring agar parent m nahi ha koi poision set
+            same  goes for width!*/
+        top: 0;  
+        width: 50%;
+        /* background-color: darkmagenta; */
+
+        /* ZINDEX ALSO WORKS */
+        
+    }
+
+        
+    .sidebar{
+        align-self: flex-start;
+        position: sticky;
+        top: 0 ;
+    }
+    nav{
+        position: sticky;
+        top: 10px;
+       
+    }
+
+

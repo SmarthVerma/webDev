@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The auto-Grid</title>
+    <link rel="stylesheet" href="utility.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        color: wheat;
+      }
+      .container {
+        border: 3px solid rgb(243, 43, 79);
+        display: flex;
+        width: 70vw;
+        padding: 1rem;
+        height: auto;
+      }
+      .box {
+        border: 2px solid rgb(180, 135, 180);
+        background-color: rgb(36, 36, 177);
+        color: wheat;
+        width: auto;
+        height: 53px;
+        overflow: clip;
+      }
+      /* yehi ha */
+      .auto-grid {
+        --min-column-size:22rem;
+        display: grid;
+        gap: 1rem;
+        /*                             repeat( how many times, kis size me) */
+        /*                             minmax(minumum width se ,maximum width tk) */
+        /* grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));       overflow ho skta ha*/
+            
+        /* much better option */
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auto-grid container">
+      <div class="box flex align-center p-lr1">Lorem</div>
+      <div class="box flex align-center p-lr1">Quis</div>
+      <div class="box flex align-center p-lr1">dolor</div>
+      <div class="box flex align-center p-lr1">sit</div>
+      <div class="box flex align-center p-lr1">amet</div>
+      <div class="box flex align-center p-lr1">consectetur</div>
+      <div class="box flex align-center p-lr1">adipisicing</div>
+      <div class="box flex align-center p-lr1">elit</div>
+      <div class="box flex align-center p-lr1">Perspiciatis</div>
+      <div class="box flex align-center p-lr1">harum</div>
+      <div class="box flex align-center p-lr1">Quam</div>
+      <div class="box flex align-center p-lr1">lusto</div>
+      <div class="box flex align-center p-lr1">gustavo</div>
+      <div class="box flex align-center p-lr1">shaniChan</div>
+    </div>
+  </body>
+</html>

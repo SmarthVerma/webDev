@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+}
+
+.center{
+    place-content: center;
+    align-items: center;
+}
+.align-center{
+    align-items: center;
+}
+
+.p-lr1{
+    padding: 0 .41rem 0 .41rem;
+}

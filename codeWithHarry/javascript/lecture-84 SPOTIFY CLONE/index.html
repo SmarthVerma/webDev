@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify - Web Player: Music for everyone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="utilities.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <style></style>
+</head>
+
+<body>
+  <div class="containerBig flex">
+    <div class="left flex">
+      <div class="smallBox container p-1">
+        <ul>
+          <li class="pointer">
+            <img class="invert" width="81" src="assests/images/logo.svg" alt="" />
+          </li>
+          <li class="pointer bold greyColor fsize-1">
+            <img class="invert" width="17" src="assests/images/homeLogo.svg" alt="" />Home
+          </li>
+          <li class="pointer bold fsize-1">
+            <img class="invert" width="20" src="assests/images/searchIcon.svg" alt="" />
+            Search
+          </li>
+        </ul>
+      </div>
+      <div class="bigBox container p-1 relative ">
+        <div class="library flex alignCenter gap-2 pointer">
+          <img width="19" src="assests/images/libraryLogo.svg" alt="" />
+          <span class="greyColor fsize-1 bold">Your library</span>
+
+        </div>
+        <div class="library-songs  m-1 ">
+          <ul>
+            <!-- <li>
+              <div class="song-card-lib ">
+                <div class="music-icon">
+                  <img class="invert" src="assests/images/music.png" alt="">
+                </div>
+                <div class="song-detail-lib">
+                  <h4>
+                    heeloasda asd as asd as
+                  </h4>
+                </div>
+                  <div class="playnow">
+                    <img class="invert" width="25" src="assests/images/play-arrow-svgrepo-com.svg" alt="">
+                    PlayNow
+                  </div>
+              </div>
+            </li> -->
+            
+             
+            
+          </ul>
+        </div>
+
+
+        <div class="words absolute">
+          <ul class="greyColor flex wrap gap-1">
+            <li class="pointer">Legal</li>
+            <li class="pointer">Safety & Privacy Center</li>
+            <li class="pointer">Privacy</li>
+            <li class="pointer">Cookies</li>
+            <li class="pointer">About Ads</li>
+            <li class="pointer">Accessibility</li>
+          </ul>
+
+          <div class="language mTop-1 mBot-1">
+            <button class="pointer flex alignCenter gap-1 bold-1">
+              <img class="invert" width="17" src="assests/images/langLogo.svg" alt="" />
+              English
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right container flex flexColumn relative">
+
+      <div class="nav flex alignCenter space-between">
+
+        <div class="next-back flex center">
+          <button class="pointer">
+            <div class="circle flex center">
+              <img class="invert rotate" src="assests/images/right-arrow.png" alt="" />
+          </button>
+          <button class="pointer">
+            <div class="circle flex center">
+              <img class="invert" src="assests/images/right-arrow.png" alt="" />
+          </button>
+        </div>
+        <div class="log_sign flex center gap-0">
+          <button class="sign bold greyColor ">SignUp</button>
+          <button class="log bold ">Log in</button>
+        </div>
+
+      </div>
+      <h2 class="p-lr2 p-top1">Spotify Playlist</h2>
+      <div class="cardContainer p-1 flex wrap gap-1 ">
+
+
+        <div class="card brdr-rad1  flex flexColumn  center">
+          <div class="card-image relative ">
+            <div class="playContainer">
+              <img class="playbtn" src="assests/images/playButton.svg" alt="">
+
+            </div>
+            <img class="brdr-rad1" src="https://i.scdn.co/image/ab67706f000000029a03d5fd9d0bdb8065496b18" alt="">
+          </div>
+          <div class="song-details p-l1 p-r1">
+            <h2>Party Hits</h2>
+            <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
+            </p>
+          </div>
+        </div>
+
+        <div class="card brdr-rad1  flex flexColumn  center">
+          <div class="card-image relative ">
+            <div class="playContainer">
+              <img class="playbtn" src="assests/images/playButton.svg" alt="">
+
+            </div>
+            <img class="brdr-rad1" src="https://i.scdn.co/image/ab67706f000000029a03d5fd9d0bdb8065496b18" alt="">
+          </div>
+          <div class="song-details p-l1 p-r1">
+            <h2>Party Hits</h2>
+            <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
+            </p>
+          </div>
+        </div>
+
+        <div class="card brdr-rad1  flex flexColumn  center">
+          <div class="card-image relative ">
+            <div class="playContainer">
+              <img class="playbtn" src="assests/images/playButton.svg" alt="">
+
+            </div>
+            <img class="brdr-rad1" src="https://i.scdn.co/image/ab67706f000000029a03d5fd9d0bdb8065496b18" alt="">
+          </div>
+          <div class="song-details p-l1 p-r1">
+            <h2>Party Hits</h2>
+            <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
+            </p>
+          </div> 
+        </div>
+
+
+      </div>
+      <div class="playbar absolute flex  gap-1 relative brdr-rad2">
+        <div class="wrapper-playbar flex">
+<div id="songName" class="songName-player ">
+     
+        </div>
+        <div class="icons flex Center ">
+          
+          <img class="invert pointer playbar-next-prev" id="prev" src="assests/images/playbarIcons/prevsong.svg" alt="">
+          <img class="invert pointer playbar-play" id="play"  src="assests/images/playbarIcons/play.svg" alt="">
+          <img class="invert pointer playbar-next-prev" id="next"  src="assests/images/playbarIcons/nextsong.svg" alt="">
+        </div>
+        <div id="songDuration" class="song-duration flex">
+          <span>
+
+          </span>
+        </div>
+        </div>
+        
+        <div class="seekBar brdr-rad2 absolute pointer">
+          <div id="myCircle" class=" seek-circle absolute pointer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
