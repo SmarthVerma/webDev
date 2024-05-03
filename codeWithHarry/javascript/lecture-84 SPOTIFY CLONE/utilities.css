@@ -1,3 +1,7 @@
+.container {
+  background-color: #121212;
+  border-radius: 4px;
+}
 .flex{
     display: flex;
 }
@@ -70,6 +74,9 @@
 }
 .mBot-1{
     margin-bottom: 19px;
+}
+.mLeft-1{
+    margin-left: 1rem;
 }
 
 

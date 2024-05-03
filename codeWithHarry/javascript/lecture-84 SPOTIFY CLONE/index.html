@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="utilities.css" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <style></style>
+
 </head>
 
 <body>
@@ -81,9 +81,12 @@
     <div class="right container flex flexColumn relative">
 
       <div class="nav flex alignCenter space-between">
-
+        
         <div class="next-back flex center">
-          <button class="pointer">
+          <div class="hamburger" id="myHam">
+            <img class="invert pointer" src="assests/images/hamburger.svg" alt="">
+          </div>
+          <button class="pointer mLeft-1">
             <div class="circle flex center">
               <img class="invert rotate" src="assests/images/right-arrow.png" alt="" />
           </button>
@@ -92,17 +95,17 @@
               <img class="invert" src="assests/images/right-arrow.png" alt="" />
           </button>
         </div>
-        <div class="log_sign flex center gap-0">
-          <button class="sign bold greyColor ">SignUp</button>
-          <button class="log bold ">Log in</button>
+        <div class="log_sign flex center gap-1 ">
+          <button class="sign bold greyColor pointer">SignUp</button>
+          <button class="log bold pointer">Log in</button>
         </div>
 
       </div>
       <h2 class="p-lr2 p-top1">Spotify Playlist</h2>
-      <div class="cardContainer p-1 flex wrap gap-1 ">
+      <div class="cardContainer p-1 flex wrap gap-1 brdr">
 
 
-        <div class="card brdr-rad1  flex flexColumn  center">
+        <!-- <div class="card brdr-rad1  flex flexColumn pointer center">
           <div class="card-image relative ">
             <div class="playContainer">
               <img class="playbtn" src="assests/images/playButton.svg" alt="">
@@ -115,37 +118,10 @@
             <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
             </p>
           </div>
-        </div>
+        </div> -->
 
-        <div class="card brdr-rad1  flex flexColumn  center">
-          <div class="card-image relative ">
-            <div class="playContainer">
-              <img class="playbtn" src="assests/images/playButton.svg" alt="">
-
-            </div>
-            <img class="brdr-rad1" src="https://i.scdn.co/image/ab67706f000000029a03d5fd9d0bdb8065496b18" alt="">
-          </div>
-          <div class="song-details p-l1 p-r1">
-            <h2>Party Hits</h2>
-            <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
-            </p>
-          </div>
-        </div>
-
-        <div class="card brdr-rad1  flex flexColumn  center">
-          <div class="card-image relative ">
-            <div class="playContainer">
-              <img class="playbtn" src="assests/images/playButton.svg" alt="">
-
-            </div>
-            <img class="brdr-rad1" src="https://i.scdn.co/image/ab67706f000000029a03d5fd9d0bdb8065496b18" alt="">
-          </div>
-          <div class="song-details p-l1 p-r1">
-            <h2>Party Hits</h2>
-            <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
-            </p>
-          </div> 
-        </div>
+       
+        
 
 
       </div>
@@ -160,10 +136,14 @@
           <img class="invert pointer playbar-play" id="play"  src="assests/images/playbarIcons/play.svg" alt="">
           <img class="invert pointer playbar-next-prev" id="next"  src="assests/images/playbarIcons/nextsong.svg" alt="">
         </div>
-        <div id="songDuration" class="song-duration flex">
-          <span>
+        <div id="songDuration" class="song-duration flex gap-1 ">
+          <span class="">
 
           </span>
+          <div class="volume flex align ">
+            <img class="invert" width="30" src="assests/images/volume.svg" alt="">
+              <input id="volRange" type="range">
+          </div>
         </div>
         </div>
         
