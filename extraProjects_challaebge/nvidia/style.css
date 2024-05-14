@@ -1,0 +1,33 @@
+ /* Custom scrollbar styling */
+  /* Webkit (Chrome, Safari, etc.) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+  }
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0);
+
+.card-container{
+    --min-column-size:18rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+.card{
+    display: flex;
+}
+
+.end-grid{
+     --min-column-size:18rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+
+.nav-container{
+  transition: all 0.3s linear;
+}

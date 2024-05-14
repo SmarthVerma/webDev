@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no of click  </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: grey;
+            display: flex;
+           height: 100vh;
+           width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            background-color: black;
+            display:  flex;
+            justify-content: center;
+            gap: 14px;
+            padding: 14px;
+        }
+
+        .box{
+            width: 244px;
+            height: 169px;
+            cursor: pointer;
+            display: flex;
+            place-content: center;
+            align-items: center;
+            font-size: 34px;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+        }
+
+        .box1{
+            background-color: green;
+        }
+        .box2{
+            background-color: rgb(207, 13, 13);
+        }
+        .box3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    
+    <script>
+        let box1= document.querySelector(".box1")
+        let box2= document.querySelector(".box2")
+        let box3= document.querySelector(".box3")
+
+      
+        count1=0
+        count2=0
+        count3=0
+            
+
+        document.querySelector(".container").addEventListener("click",()=>{
+            alert("being clicked")
+        })
+        
+            box1.addEventListener("click", (e)=>{
+                 e.stopPropagation()
+                  box1.innerHTML=count1++;
+                })
+                box2.addEventListener("click", (e)=>{
+              
+                    box2.innerHTML=count2++;
+                })
+                box3.addEventListener("click", (e)=>{
+             
+                box3.innerHTML=count3++;
+            })
+    </script>
+</body>
+</html>

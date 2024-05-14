@@ -22,6 +22,7 @@ function timeFormat(sec) {
 
 function playMusic(track, pause = false) {
   currentSong.src = `/assests/songs/${currentFolder}/` + track;
+  console.log(`test2 `, currentSong);
   if (!pause) {
     currentSong.play();
   }
@@ -40,6 +41,9 @@ async function main() {
 
     currentFolder = folders[0];
   }
+  
+ 
+  
   let songs = await getsongs();
 
   // showing all the songs in library
@@ -68,6 +72,12 @@ async function main() {
   let folderList = document.querySelector(".cardContainer");
   folderList.innerHTML=" "
   for (const key in folders) {
+    // getting jason
+    let a = await fetch(
+      `http://127.0.0.1:5501/assests/songs/${folders[key]}/info.json`
+    );
+    let b = await a.json();
+    console.log(b);
     folderList.innerHTML += ` <div class="card brdr-rad1 pointer flex flexColumn  center">
           <div class="card-image relative ">
             <div class="playContainer">
@@ -78,8 +88,7 @@ async function main() {
           </div>
           <div class="song-details p-l1 p-r1">
             <h2>${folders[key]}</h2>
-            <p class="about-song greyColor">A mix of the biggest pop, dance, and hip hop party songs. Cover: Doja Cat
-            </p>
+            <p class="about-song greyColor">${b.discipt}</p>
           </div> 
         </div>`;
   }
@@ -89,8 +98,14 @@ async function main() {
 
   play.src = "assests/images/playbarIcons/play.svg";
 
-  let currentIndex = songs.indexOf(currentSong.src.split("/songs/")[1]);
-
+  let currentIndex = songs.indexOf(
+    currentSong.src.split("/songs/")[1].replaceAll("%20", " ").split("/")[1]
+  );
+  
+  
+  
+  
+  
   // attaching event listener to all liberary_cards
   Array.from(document.querySelectorAll(".song-card-lib")).forEach((e) => {
     e.addEventListener("click", () => {
@@ -107,10 +122,12 @@ async function main() {
 
   play.addEventListener("click", () => {
     if (currentSong.paused) {
+      console.log(`clicked on pause`);
+      
       currentSong.play();
-      play.src = "http://127.0.0.1:5500/assests/images/playbarIcons/pause.svg";
+      play.src = "http://127.0.0.1:5501/assests/images/playbarIcons/pause.svg";
     } else {
-      play.src = "http://127.0.0.1:5500/assests/images/playbarIcons/play.svg";
+      play.src = "http://127.0.0.1:5501/assests/images/playbarIcons/play.svg";
       currentSong.pause();
     }
   });
@@ -118,12 +135,13 @@ async function main() {
   //Updating duration of song by adding eventlistener(timeupdate)
 
   currentSong.addEventListener("timeupdate", () => {
-    songDuration.firstElementChild.innerHTML =
+    
+     songDuration.firstElementChild.innerHTML =
       timeFormat(currentSong.currentTime) +
       "/" +
       timeFormat(currentSong.duration);
 
-    myCircle.style.left =
+     myCircle.style.left =
       (currentSong.currentTime / currentSong.duration) * 100 + "%";
   });
 
@@ -152,7 +170,6 @@ async function main() {
 
   // adding event listener to hamBurger
   myHam.addEventListener("click", () => {
-    console.log("being clicked in ham");
 
     document.querySelector(".left").style.left = "0";
     document.querySelector(".left").style.flexBasis = "50%";
@@ -191,7 +208,7 @@ async function main() {
 }
 
 async function getfolders() {
-  let a = await fetch("http://127.0.0.1:5500/assests/songs/");
+  let a = await fetch("http://127.0.0.1:5501/assests/songs/");
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -209,13 +226,12 @@ async function getfolders() {
 async function getsongs() {
   console.log(currentFolder);
   
-  let a = await fetch(`http://127.0.0.1:5500/assests/songs/${currentFolder}`);
+  let a = await fetch(`http://127.0.0.1:5501/assests/songs/${currentFolder}`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
 
   let song_data = div.getElementsByTagName("a");
-  console.log(currentFolder.replace(" ", "%20"));
 
   let songs = [];
   for (let i = 0; i < song_data.length; i++) {
@@ -230,5 +246,9 @@ async function getsongs() {
   console.log("songs", songs);
   return songs;
 }
+
+
+
+// ADDING EVENT LISTERNER TO PLAY BUTTON
 
 main();

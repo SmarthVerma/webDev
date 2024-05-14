@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give me ratings</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: black;
+            color:  white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(HuGGeENt6kGyixe3hT9tnY-1200-80.jpg);
+        }
+        .container{
+            width: 600px;
+            height: 250px;
+           border: 4px;
+            background-color: rgba(0, 0, 0, 0.527);
+            flex-direction: column;
+            padding: 50px;
+            box-sizing: border-box;
+            gap: 30px;
+        }
+
+        .center{
+            display: flex;
+            align-items: center;
+            
+        }
+        .stars ul{
+            display: flex;
+            gap: 13px;
+        }
+        .pointer{
+            cursor: pointer;
+        }
+        .brdr{
+            border: 2px dotted white;
+        }
+
+        .response{
+            height: 38px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container center">
+        <div class="response">
+                <h1>Give us ratings</h1>
+        </div> 
+            <div class="stars">
+                <ul>
+                    <li><img class="pointer yellow" width="65" src="star-svgrepo-com.svg" alt=""></li>                   
+                    <li><img class="pointer yellow" width="65" src="star-svgrepo-com.svg" alt=""></li>
+                    <li><img class="pointer yellow" width="65" src="star-svgrepo-com.svg" alt=""></li>
+                    <li><img class="pointer yellow" width="65" src="star-svgrepo-com.svg" alt=""></li>
+                    <li><img class="pointer yellow" width="65" src="star-svgrepo-com.svg" alt=""></li>
+                    
+                </ul>
+                
+            </div>
+    </div>
+    <script src="scripty.js"></script>
+</body>
+</html>

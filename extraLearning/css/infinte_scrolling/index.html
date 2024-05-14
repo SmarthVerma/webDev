@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infinite_scrolling</title>
+    <link rel="stylesheet" href="input.css">
+    <style>
+        li {
+
+            box-shadow: 0 0.5rem 1rem -0.25rem hsl(218, 33%, 9%);
+        }
+
+        .container{
+            max-width: 804px;
+            border: 2px solid lime;
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg,transparent, white 20%, white 80%, transparent);
+        }
+        
+        .scroller{
+            width: max-content;
+            padding-block: 1rem;
+            display: flex;
+            gap: 1rem;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll{
+            to{
+                transform: translate(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white w-lvw flex justify-center items-center">
+    <h1 class="text-4xl font-[arial] font-bold">Infinite scroll!</h1>
+    <div class="container flex justify-center items-center mt-60">
+        <ul class="scroller ">
+            <li class="rounded-xl bg-slate-500 px-4 py-2">HTML</li>
+            <li class="rounded-xl bg-slate-500 px-4 py-2">CSS</li>
+            <li class="rounded-xl bg-slate-500 px-4 py-2">JAVASCRIPT</li>
+            <li class="rounded-xl bg-slate-500 px-4 py-2">TAILWINDCSS</li>
+            <li class="rounded-xl bg-slate-500 px-4 py-2">REACT</li>
+            <li class="rounded-xl bg-slate-500 px-4 py-2">EXPRESS</li>
+            <li class="rounded-xl bg-slate-500 px-4 py-2">WEBDEV</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

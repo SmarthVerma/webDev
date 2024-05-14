@@ -84,37 +84,37 @@ let prom5 = new Promise((resolve, reject) => {
 //     return a + 1;
 //   });
 
-// let p1= Promise.all([prom1, prom2, prom3, prom4, prom5])
+let p1= Promise.all([prom1, prom2, prom3, prom4, prom5])
 
-// p1.then((a)=>{
-//     console.log(a)
-// }).catch(err=>{
-//     console.log(err);
-// })
+p1.then((a)=>{
+    console.log(a)
+}).catch(err=>{
+    console.log(err);
+})
 
-// let p2= Promise.allSettled([prom1, prom2, prom3, prom4, prom5])
+let p2= Promise.allSettled([prom1, prom2, prom3, prom4, prom5])
 
-// p2.then((a)=>{
-//     console.log(a)
-// }).catch(err=>{
-//     console.log(err);
-// })
+p2.then((a)=>{
+    console.log(a)
+}).catch(err=>{
+    console.log(err);
+})
 
-// let p3= Promise.race([prom1, prom2, prom3, prom4, prom5])
+let p3= Promise.race([prom1, prom2, prom3, prom4, prom5])
 
-// p3.then((a)=>{
-//     console.log(a)
-// }).catch(err=>{
-//     console.log(err);
-// })
+p3.then((a)=>{
+    console.log(a)
+}).catch(err=>{
+    console.log(err);
+})
 
-// let p4= Promise.any([prom1, prom2, prom3, prom4, prom5])
+let p4= Promise.any([prom1, prom2, prom3, prom4, prom5])
 
-// p4.then((a)=>{
-//     console.log(a)
-// }).catch(err=>{
-//     console.log(err);
-// })
+p4.then((a)=>{
+    console.log(a)
+}).catch(err=>{+
+    console.log(err);
+})
 
 let p5= Promise.resolve([prom1, prom2, prom3, prom4, prom5])
 let p6= Promise.reject([prom1, prom2, prom3, prom4, prom5])

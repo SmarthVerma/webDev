@@ -1,0 +1,26 @@
+nav ul{
+    position: relative;
+}
+.container nav li{
+    display: inline-block;
+}
+
+.menu-sub{
+    position: absolute;
+    width: 100%;
+    background-color: rgb(21 94 117 / var(--tw-bg-opacity));
+    left: 0;
+    display: none;
+    
+}
+
+.menu li:hover .menu-sub{
+    color: red;
+    display: block;
+    background-color: rgb(21 94 117 / var(--tw-bg-opacity));
+}
+
+.menu-sub li:hover{
+    color: white;
+    text-decoration: underline;
+}

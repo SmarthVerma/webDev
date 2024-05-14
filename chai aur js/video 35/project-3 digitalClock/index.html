@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>digi_clock</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: black;
+        min-width: 100dvw;
+        min-height: 80dvh;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        color: white;
+        
+        
+      }
+      .time {
+        background-color: yellow;
+        width: clamp(21px,25vmax, 220px);
+        color: black;
+        border-radius: 7px;
+        font-size: 21px;
+        font-weight: 700;
+        padding: 10px 5px 10px 5px;
+        font-size: 28px;
+        font-weight: 800;
+        display: flex;
+        place-content: center;
+        align-items: center;
+
+      }
+      .container{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        justify-content: center;
+        align-items: center;
+      }
+      h2{
+        font-size: clamp(21px,3vmax, 300px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Clock Time</h2>
+      <div class="time">00:00:00</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

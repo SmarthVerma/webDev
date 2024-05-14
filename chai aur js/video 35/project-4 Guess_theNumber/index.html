@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The number</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            
+            min-height: 7vh;
+            font-size: clamp(16px,3vw ,39px);
+            padding: 9px 0 9px 0;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 46%;
+            /* border: 2px dotted red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 21px;
+            padding: 40px;
+            height: calc(100vh - 7vh - 160px);
+        }
+        .info{
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+        }
+        .result{
+            text-align: left;
+            align-self: baseline;
+            margin-left: 3vmax;
+            font-size: 24px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+        .submit{
+            background-color: black;
+            color: white;
+            padding: 5px 23px 5px 23px;
+            border-radius: 7px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+        }
+
+        .brdr{
+            border: 2px dotted lime;
+        }
+
+        .heading-guess{
+            text-align: center;
+            font-size: 31px;
+            font-weight: 500;
+        }
+        #guessBox{
+            border: 0;
+            outline: 0;
+            border-radius: 4px;
+            padding: 6px;
+            width: 160px;
+        }
+        .low-high{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>
+            Guess The Number
+        </h1>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="info">
+
+                <p>
+                    Try and guess a random number between 1 and 100.
+                </p>
+                <p>
+                    You have 10 attempts to guess the right number.
+                </p>
+            </div>
+            <form class="form">
+                <label class="heading-guess" for="guessBox">Guess a number</label>
+                <input type="text" id="guessBox" placeholder="enter your guess">
+                <input class="submit" type="submit" value="Submit">
+            </form>
+
+            <div class="result ">
+                <p>Previous Guesses: <span class="prev-guess"></span></p>
+                <p>Remaining Attempts: <span class="remain"></span></p>
+                <p class="low-high"></p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

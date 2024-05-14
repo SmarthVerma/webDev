@@ -1,0 +1,6 @@
+//power of=> /\s+/g
+	/\s+/g is a regular expression that matches one or more whitespace characters (spaces, 		tabs, newlines, etc.) globally in the string.
+
+const sentence = "hello lol i     am lol";
+const modifiedSentence = sentence.replace(/\s+/g, " ");
+console.log(modifiedSentence); // Output: "hello lol i am lol"

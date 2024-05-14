@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI CALCULATOR</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: gray;
+        padding: 20rem 50rem 20rem 50rem;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      input{
+        outline: 0;
+        border: 0; 
+        border-radius: 2px;
+        text-align: start;
+        padding-left: 25px;
+        height: 24px;
+     
+      }
+      .height, .weight{
+        display: flex;
+        gap: 4px;
+      }
+      .discript{
+        margin: 15px;
+      }
+
+      h4{
+        font-weight: 200;
+        margin-top: 6px;
+      }
+      .border{
+        border: 3px solid red;
+      }
+      button{
+        width: 144px;
+        margin: auto;
+        height: 34px;
+        border-radius: 7px;
+        border: 0;
+        font-weight: 800;
+      }
+      button:hover{
+        background-color: blanchedalmond;
+     
+      }
+      .center{
+        place-content: center;
+        align-items: center;
+      }
+     
+      .flex{
+        display: flex;
+      }
+      .pointer{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <div class="inputs">
+        <div class="height flex center">
+          <label for="height">Enter your height</label>
+          <input type="text" id="height" placeholder="in cm" required />
+        </div>
+        <div class="weight flex center">
+          <label for="weight">Enter your weight</label>
+          <input type="text" id="weight" placeholder="in kg" required/>
+        </div>
+        <button class="pointer" onclick="calculate()">Submit</button>
+      </div>
+      <div class="discript">
+        <h2>BMI Weight Guide</h2>
+        <h4>Under wieght = Less than 18.6</h4>
+        <h4>Normal range = 18.6 abd 24.9</h4>
+        <h4>Over weight = greater than 24.9</h4>
+      </div>
+    </div>
+    <script>
+        function calculate(){
+            let heightEle= document.getElementById("height")
+            let userheight=heightEle.value
+            
+            let weightEle= document.getElementById("weight")
+            let userweight=weightEle.value
+
+            let inMeter_sq=(userheight/100)**2;
+
+            let bmi=(userweight/inMeter_sq).toFixed(2);
+            
+            let msg;
+            if(bmi<18.6){
+                msg="you are underweight"
+            }
+            else if(bmi>24.9){
+
+                msg="you are overWiight"
+            }else{
+                msg="you are normal"
+            }
+
+            alert(`Your Bmi is: ${bmi} \n\n${msg}`)
+            
+        }
+    </script>
+  </body>
+</html>
