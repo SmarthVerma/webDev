@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = express.Router();  // differnce=> app ki jahag router
 
 // define the home page route
 router.get("/", (req, res) => {
