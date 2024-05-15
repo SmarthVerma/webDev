@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock paper scissor game!</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: black;
+        min-height: 100dvh;
+        color: white;
+        font-size: 31px;
+        font-weight: 800;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .container {
+        /* background-color: cornflowerblue; */
+        width: 80vw;
+        padding: 1rem;
+        min-width: 300px;
+       
+      }
+
+      .length li{
+        width: 240px;
+        height: 240px;
+        list-style: none;
+      }
+      .length li img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rem;
+        scale: 1;
+        transition: all 0.4s;
+      }
+      .length li img:hover{
+       
+        scale: 1.05;
+        
+      }
+
+      .flex {
+        display: flex;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .center {
+        place-content: center;
+        align-items: center;
+      }
+
+      .pointer{
+        cursor: pointer;
+      }
+      .gap-0{
+        gap: 2rem;
+      }
+      .gap-1{
+        gap: 4rem;
+      }
+      #stop{
+        transition: all 0.4s;
+      }
+      #stop:hover{
+        scale: 1.05;
+      }
+   @media screen and (max-width: 818px) {
+    body{
+      background-color: navy;
+    }
+
+    .length li{
+        width: 140px;
+        height: 140px;
+        list-style: none;
+      }
+      .footer{
+        width: 140px;
+      }
+      .footer img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      
+}
+   @media screen and (max-width: 488px) {
+   
+    body{
+      background-color: brown;
+    }
+    .length li{
+        width: 90px;
+        height: 90px;
+      
+      }
+      .footer{
+        width: 120px;
+      }
+      .footer img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      .container{
+        gap: 0.7rem;
+        min-width: 300px;
+      }
+      
+}
+
+    </style>
+  </head>
+  <body class="flex center">
+    <div class="container flex-col center gap-1">
+      <div class="options">
+        <ul class="flex length gap-0">
+          <li><img id="stone" class="pointer" src="images/stones.jpg" alt="" /></li>
+          <li><img id="paper" class="pointer" src="images/papers.webp" alt="" /></li>
+          <li><img id="scis" class="pointer" src="images/sccissor.webp" alt="" /></li>
+        </ul>
+      </div>
+      <div class="bigtexts">
+        <div class="score"><span></span></div>
+            
+            <div class="versus"></div>
+            <div class="result"></div>
+      </div>
+      <div class="footer">
+        <img id="stop" class="pointer" src="images/red button.jpeg" alt="">
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
