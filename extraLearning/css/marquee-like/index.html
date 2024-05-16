@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marquee</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-size: 5rem;
+        height: 100vh;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      .container {
+        border-radius: 10px;
+        width: 80vw;
+        background-color: whitesmoke;
+        overflow: hidden;
+        position: relative;
+      }
+      .container:before,
+      .container:after {
+        position: absolute;
+        top: 0;
+        width: 10rem;
+        height: 100%;
+        content: "";
+        z-index: 1;
+      }
+
+      .container::before {
+        left: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(245, 242, 242, 0.678) 0%,
+          transparent 100%
+        );
+      }
+      .container::after {
+        right: 0;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(245, 245, 245, 0.678) 100%
+        );
+      }
+
+      .marquee-content li {
+        width: 144px;
+        background-color: teal;
+        border: 2px solid orangered;
+        flex-shrink: 0;
+        display: flex;
+        place-content: center;
+        align-items: center;
+      }
+      .marquee-content {
+        padding: 0;
+        display: flex;
+        animation: scrolling 3s linear infinite;
+      }
+
+      @keyframes scrolling {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-144px * 9));
+          /* slides times width of that content */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="marquee-content">
+        <li>🤖</li>
+        <li>❤️</li>
+        <li>👨</li>
+        <li>👌</li>
+        <li>👈</li>
+        <li>💦</li>
+        <li>🫄</li>
+        <li>😁</li>
+        <li>👍</li>
+      </ul>
+    </div>
+    <script>
+      const content = document.querySelector(".marquee-content");
+      const count = content.childElementCount;
+      console.log(content.children);
+
+      const arr = Array.from(content.children);
+      for (let i = 0; i < count; i++) {
+        console.log(arr[i].outerHTML);0000
+        content.insertAdjacentHTML("beforeend", arr[i].outerHTML);
+      }
+      console.log(content.childElementCount);
+    </script>
+  </body>
+</html>

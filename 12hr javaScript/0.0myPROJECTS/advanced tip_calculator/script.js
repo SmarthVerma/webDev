@@ -1,52 +1,47 @@
-console.log(`hello`);
-
+let amount = 0
 let people = 1;
 let tip = 0;
-let cost = 0;
+let tip_ammount = 0
+let total = 0
 
-let plus = document.querySelector(".plus");
-plus.addEventListener("click", () => {
-  let number = document.querySelector(".num");
-  people++;
-  number.innerHTML = people;
-});
-
-let minus = document.querySelector(".minus");
-minus.addEventListener("click", () => {
-  let number = document.querySelector(".num");
-  if (people > 1) {
-    people--;
-    number.innerHTML = people;
-  }
-});
-
-let cash = document.querySelector("#amount");
-cash.addEventListener("input", (e) => {
-  console.log(e);
-  if (e.data == null) {
-    let str = document.querySelector(".show").innerHTML;
-    document.querySelector(".show").innerHTML = str.slice(0, -1);
-  } else {
-    document.querySelector(".show").innerHTML += e.data;
-  }
-  cost = parseInt(document.querySelector(".show").innerHTML);
-});
-
-let tipsy = document.querySelector("#tip");
-let str2 = "";
-tipsy.addEventListener("input", (e) => {
-  console.log(e);
-  if (e.data == null) {
-    str2 = str2.slice(0, -1);
-  } else {
-    str2 += e.data;
-  }
-  console.log(str2);
-  tip = parseInt(str2);
-  console.log(`deasd`, tip);
-});
-
+const show = document.querySelector(".show")
+const num = document.querySelector(".num")
+const input = document.querySelector("#amount")
+const tipsy = document.querySelector("#tip")
+const plus= document.querySelector(".plus")
+const minus= document.querySelector(".minus")
 function calculation() {
-  let total_RESULt = (cost * (tip / 100)) / people;
-  document.querySelector(".show").innerHTML = total_RESULt;
+  amount=Number(input.value)
+  tip=Number(tipsy.value)
+  tip = tip / 100;
+  tip_ammount = (amount * tip);  
+  total = (tip_ammount + amount) / people;
+  show.innerHTML =  `₹${total.toFixed(2)}`
 }
+
+function increase_decrease(flag) { // flag representing increase click or decrease
+  if (flag) {
+    people++;
+    num.innerHTML =people
+    calculation()
+  }
+  else 
+    if (people == 1)console.error("cant decrease people more than 1");
+    else {
+      people--
+      num.innerHTML = people
+      calculation()
+    } 
+}
+
+
+// ALL EVENT LISTNERS
+input.addEventListener("keyup", calculation)
+tipsy.addEventListener("keyup", calculation)
+plus.addEventListener("click", ()=>{
+    increase_decrease(true)
+})
+minus.addEventListener("click",()=>{
+  increase_decrease(false)
+} )
+

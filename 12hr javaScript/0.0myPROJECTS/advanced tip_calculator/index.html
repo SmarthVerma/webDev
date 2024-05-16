@@ -3,81 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            background-color: #848BE9;
-            color: white;
-            height: 100dvh;
-            width: 100dvw;
-            font-family: Verdana, Geneva, Tahoma, sans-serif
-        }
-        .container{
-            background-color: #242235;
-            height: 80vh;
-            width: 40vw;
-            border-radius: 2rem;
-            padding: 3rem;
-            box-shadow: 10px 10px 7px 3px rgba(0,0,0,0.75);
-            padding-top: 8rem;
-            font-weight: 600;
-            box-sizing: border-box;
-        }
-        .flex{
-            display: flex;
-        }
-        .flex-col{
-            display: flex;
-            flex-direction: column;
-        }
-        .align-center{
-            align-items: center;
-        }
-        .justify-center{
-            justify-content: center;
-        }
-
-        input{
-            /* width: 144px; */
-            height: 51px;
-            border-radius: 2rem;
-            background-color: #313554;
-            border: 0;
-            outline: 0;
-            color: white;
-            padding: 0 1rem 0 1rem;
-            font-weight: 800;
-        }
-        .gap-0{
-            gap: 0.75rem;
-        }
-        .gap-1{
-            gap: 1.75rem;
-        }
-        .people{
-           
-        }
-        li{
-            list-style: none;
-        }
-        .m-top{
-            margin-top: 4px;
-        }
-        .pointer{
-            cursor: pointer;
-        }
-        .secondContainer{
-            margin-top: 4rem;
-            justify-content: space-between;
-        }
-        .total{
-            padding-left: 7px;
-        }
-    </style>
+    <title>calcky</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="flex justify-center align-center">
         <div class="container">
@@ -85,15 +12,21 @@
                 <div class="div collection flex-col gap-0">
 
                     <label for="amount"><h2>Bill total</h2></label>
-                    <input id="amount" class="input" type="text">
+                    <div class="input-container flex align-center">
+                        ₹
+                        <input id="amount" class="input" type="text" placeholder="0.00">
+                    </div>
                 </div>
                 <div class="collection flex-col gap-0">
 
                     <label for="tip"><h2>Tip</h2> </label>
-                    <input id="tip" class="input" type="text">
+                    <div class="input-container flex align-center">
+                        %
+                        <input id="tip" class="input" type="text" placeholder="10">
+                    </div>
                 </div>
             </form>
-            <div class="secondContainer flex">
+            <div class="secondContainer flex ">
                 <div class="people">
                     <h2>People</h2>
                     <div class="add-less">
@@ -107,7 +40,7 @@
                 <div class="result">
                     <h2>Total Bill</h2>
                     <div class="total">
-                        <strong>₹<span class="show"></span></strong>
+                        <strong><span class="show">₹0.00</span></strong>
 
                     </div>
                 </div>
