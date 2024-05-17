@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Which is cuter</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .dog {
+      width: 620px;
+      height: 520px;
+      border-radius: 17px;
+      overflow: clip;
+      border: 2px solid white;
+      cursor: pointer;
+      position: relative;
+    }
+    .dog > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+      position: relative;
+    }
+    .cat {
+      width: 620px;
+      height: 520px;
+      border-radius: 17px;
+      overflow: clip;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+    .cat > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+    .container {
+      border-radius: 17px;
+    background-color: rgba(22, 20, 20, 0.5);
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-direction: column;
+      gap: 6rem;
+    }
+    h1{
+        font-size: 60px;
+    }
+
+    .versus{
+        filter: drop-shadow(2px 2px 4px rgba(3, 3 , 3  , ));
+    }
+    .wrapper{
+              display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .box-dog{
+        display: flex;
+        place-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 60px;
+        position: relative;
+        z-index: 2; 
+    }
+   
+    .counter{
+        font-size: 30px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+  </style>
+  <body>
+    <div class="container">
+        <h1>Which is cuter?</h1>
+        <div class="wrapper">
+            <div class="dog">
+              <img src="" alt="" />
+            </div>
+
+            <img
+              width="80"
+              class="versus"
+              src="assests/Street_Fighter_VS_logo.png"
+              alt=""
+              draggable="false"
+            />
+            <div class="cat">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="counter">
+            <div class="dog-count">Dogs: </div>
+            <div class="cat-count">Cats: </div>
+          </div>
+        </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

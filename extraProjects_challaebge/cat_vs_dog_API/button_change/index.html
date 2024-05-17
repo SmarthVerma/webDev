@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           background-color: black;
+        }
+        button{
+            width: 240px;
+            height: 70px;
+            background-color: rgb(22, 92, 184);
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            color: white;
+            border-radius: 0.71rem;
+            font-size: 21px;
+        }
+        button:active{
+           background-color: rgb(41, 115, 145);
+           color: rgb(0, 0, 0);
+        }
+        .container{
+            width: 460px;
+            height: 460px;
+            background-color: rgba(218, 158, 148, 0.281);
+            border-radius: 10px;
+            
+        }
+        .container img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+        .wrapper{
+            padding: 3rem;
+                display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           gap: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+            <img class="update" src="" alt="">
+            
+        </div>
+        
+        <button id="change" >Change it</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
