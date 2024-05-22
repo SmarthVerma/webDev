@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+    .crousal {
+      width: 80%;
+      height: 560px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .image {
+      width: 360px;
+      height: 240px;
+      position: absolute;
+      top: 0;
+    }
+    .image-holder {
+        width: 360px;
+        height: 240px;
+        list-style: none;
+      position: relative;
+    }
+    .tracks {
+      width: 100%;
+      background-color: rebeccapurple;
+      display: flex;
+    }
+  </style>
+  <body>
+    <div class="crousal">
+      <button>⬅️</button>
+      <div class="track-container">
+        <ul class="tracks">
+          <li class="image-holder">
+            <img class="image" src="assests/image1.webp" alt="" />
+          </li>
+          <li class="image-holder">
+            <img class="image" src="assests/image2.jpg" alt="" />
+          </li>
+          <li class="image-holder">
+            <img class="image" src="assests/image3.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+      <button>➡️</button>
+    </div>
+  </body>
+</html>

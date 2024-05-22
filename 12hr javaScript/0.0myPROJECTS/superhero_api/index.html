@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reaching new heights</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #4e4b4b;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+        min-width: 640px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .versus {
+        margin-top: auto;
+        margin-bottom: auto;
+        /* border: 2px dotted red; */
+      }
+      .versus > img {
+        width: clamp(120px, 4vmax, 300px);
+      }
+      .card {
+        flex-grow: 1;
+        flex-basis: 200px;
+        margin: 0 10px;
+        padding: clamp(3px, 1vmax, 20px);
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .card img {
+        max-width: 60%;
+        border-radius: 10px;
+      }
+      .card h2 {
+        margin: 10px 0;
+      }
+      .card p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img id="img1"
+          src=""
+          alt="Character 2"
+        />
+        <h2 id="char-name1"></h2>
+        <p ><strong>Intelligence:</strong> <span id="intel1"></span></p>
+        <p ><strong>Strength:</strong><span id="str1"></span></p>
+        <p ><strong>Speed:</strong><span id="speed1"></span></p>
+        <p ><strong>Durability:</strong><span id="dura1"></span></p>
+        <p ><strong>Power:</strong><span id="pow1"></span></p>
+        <p ><strong>Combat:</strong><span id="comb1"></span></p>
+      </div>
+      <div class="versus">
+        <img id="img1"
+          src=""
+          alt=""
+        />
+      </div>
+      <div class="card">
+        <img id="img2"
+          src=""
+          alt="Character 2"
+        />
+       <h2 id="char-name2"></h2>
+        <p ><strong>Intelligence:</strong> <span id="intel2"></span></p>
+        <p ><strong>Strength:</strong><span id="str2"></span></p>
+        <p ><strong>Speed:</strong><span id="speed2"></span></p>
+        <p ><strong>Durability:</strong><span id="dura2"></span></p>
+        <p ><strong>Power:</strong><span id="pow2"></span></p>
+        <p ><strong>Combat:</strong><span id="comb2"></span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
