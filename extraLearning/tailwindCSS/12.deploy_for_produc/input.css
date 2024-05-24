@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+            @apply cursor-pointer bg-amber-400 text-black font-medium rounded-2xl py-1 px-4 flex items-center hover:text-2xl
+    }

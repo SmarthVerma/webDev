@@ -42,7 +42,7 @@
     let pow2= document.getElementById("pow2")
     let comb2= document.getElementById("comb2")
     let img2= document.getElementById("img2")
-
+    const btn= document.getElementById("btn")
 
     console.log(`testing things out`);
 
@@ -117,4 +117,8 @@
       }
 
     load()
+
+    btn.addEventListener("click",()=>{
+      load()
+    })
 
