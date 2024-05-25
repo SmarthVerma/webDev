@@ -1,0 +1,29 @@
+.container {
+  border: 5px solid white;
+  padding: 0.125rem 0.5rem;
+  width: 260px;
+
+  overflow-x: scroll;
+}
+
+
+/* custom scrolling */
+
+.container{
+    scrollbar-width: auto;
+    scrollbar-color: #fff #000;
+}
+
+.container::-webkit-scrollbar{
+    height: 24px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.container ::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 100px;
+    border: 5px solid #000;
+}

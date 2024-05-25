@@ -1,0 +1,15 @@
+.container {
+  border: 5px solid white;
+  padding: 0.125rem 0.5rem;
+  width: min-content;
+}
+
+
+
+
+
+/* .container {
+  border: 5px solid white;
+  padding: 0.125rem 0.5rem;
+  width: fit-content;
+} */

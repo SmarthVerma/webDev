@@ -1,0 +1,18 @@
+.container {
+  border: 5px solid white;
+  padding: 0.125rem 0.5rem;
+  width: 260px;
+
+  container-type: inline-size;
+  aspect-ratio: 9/9;
+
+  /* centering text */
+
+  display: grid;
+  place-items: center;
+}
+
+.container > p{
+  font-size: 19cqi;
+  font-size: clamp(9px, 19cqi, 3rem);
+}

@@ -77,14 +77,14 @@ async function main() {
       `http://127.0.0.1:5501/assests/songs/${folders[key]}/info.json`
     );
     let b = await a.json();
-    console.log(b);
+    console.log(`here`,a);
     folderList.innerHTML += ` <div class="card brdr-rad1 pointer flex flexColumn  center">
           <div class="card-image relative ">
             <div class="playContainer">
               <img class="playbtn" src="assests/images/playButton.svg" alt="">
 
             </div>
-            <img class="brdr-rad1" src="https://i.scdn.co/image/ab67706f000000029a03d5fd9d0bdb8065496b18" alt="">
+            <img class="brdr-rad1" src="http://127.0.0.1:5501/assests/songs/${folders[key]}/${b.url}" alt="">
           </div>
           <div class="song-details p-l1 p-r1">
             <h2>${folders[key]}</h2>
