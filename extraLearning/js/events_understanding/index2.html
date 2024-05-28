@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Example form with a submit button -->
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Username">
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Element to display message -->
+    <div id="message"></div>
+
+    <script>
+        // JavaScript to handle form submission and prevent default action
+        const form = document.getElementById('myForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', (e) => {
+            // Prevent the default form submission
+            e.preventDefault();
+
+            // Check if default action was prevented
+            if (e.defaultPrevented) {
+                message.textContent = 'Form submission prevented!';
+            } else {
+                message.textContent = 'Form submitted!';
+            }
+
+            // Simulating a situation where defaultPrevented is false
+            // To demonstrate, you can uncomment the following lines to allow the default action
+            // e.returnValue = true;
+        });
+    </script>
+</body>
+</html>

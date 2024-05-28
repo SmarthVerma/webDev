@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Target vs Current Target</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+
+    <script>
+        const parent = document.getElementById('parent');
+        
+        // Event listener attached to the parent element
+        parent.addEventListener('click', function(event) {
+            console.log('target:', event.target); // Logs the button element (target)
+            console.log('currentTarget:', event.currentTarget); // Logs the parent div element (currentTarget)
+        });
+    </script>
+</body>
+</html>

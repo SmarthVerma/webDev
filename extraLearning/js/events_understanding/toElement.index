@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toElement Example</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        #inner-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="inner-box"></div>
+    </div>
+
+    <script>
+        const outerBox = document.getElementById('box');
+        
+        // Adding event listeners for mouseover and mouseout events
+        outerBox.addEventListener('mouseover', function(event) {
+            // Log the element the mouse moved to (target)
+            console.log('Mouse moved to:', event.toElement);
+        });
+
+        outerBox.addEventListener('mouseout', function(event) {
+            // Log the element the mouse moved from (target)
+            console.log('Mouse moved from:', event.toElement);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events differnce</title>
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: slategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        background-color: cadetblue;
+        height: 225px;
+        width: 530px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .container > button {
+        width: 132px;
+        height: 55px;
+        outline: none;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 24px;
+        animation: name duration timing-function delay iteration-count direction
+          fill-mode;
+        transition: scale 0.2s ease-in-out;
+        scale: 1;
+        margin-top: auto;
+      }
+      .container > button:active {
+        background: #cec9c9;
+      }
+      .container > button:hover {
+        scale: 1.09;
+      }
+      .box2 {
+        height: 20%;
+        width: 100%;
+        background-color: #cec9c9;
+        margin-top: auto;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .space {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="btn">Click me</button>
+      <div class="box2">
+        <div class="space">Time at you clicked me: </div>
+      </div>
+    </div>
+
+    <script src="target.js"></script>
+  </body>
+</html>

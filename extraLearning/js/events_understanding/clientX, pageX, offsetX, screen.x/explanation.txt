@@ -1,0 +1,4 @@
+ClientX=>inside browser se kitne duur p ha
+PageX=> inside webpage se kitne duur ha
+Offsetx=> PageX - unnecsary(basically inside container) se kitna duur
+Screen=> whole screen se duur ha
