@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+        hr {
+      border: none;
+      height: 1px;
+      background-color: #c7cbd173;
+      width: 100%; /* Set custom width */
+      margin-left: auto; /* Center align */
+      margin-right: auto; /* Center align */
+    }
+}
